@@ -5,9 +5,15 @@ const skills = [
     {id: 26403, skill: 'Flight', possess:false}
 ]
 module.exports = {
-    getAll
+    getAll,
+    getOne
 }
 
 function getAll(){
     return skills
+}
+function getOne(id){
+    // convert url param to number
+    id = parseInt(id)
+    return skills.find(skill => skill.id === id)
 }
