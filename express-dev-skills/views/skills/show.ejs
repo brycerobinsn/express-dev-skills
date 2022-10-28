@@ -8,6 +8,11 @@
 </head>
 <body>
     <h3><%= skill.skill %> </h3>
+    <form action="/skills/<%= skill.id %>?_method=DELETE"
+        class="delete-form" method="POST">
+        <button type="submit">Delete Skill</button>
+    </form>
     <h3>Do you have? <%= skill.possess ? 'Yes' : 'Soon.tm' %> </h3>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
 </body>
 </html>

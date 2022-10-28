@@ -8,10 +8,11 @@ a {
 }
 .delete-form {
   display: inline-block;
-  margin-right: 10px;
+  
 }
 .delete-form button {
   color: red;
+  margin-right: 10px;
 }
 li {
   list-style: none;
