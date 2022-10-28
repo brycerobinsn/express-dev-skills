@@ -7,7 +7,8 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
 }
 
 function getAll(){
@@ -22,4 +23,9 @@ function create(skill) {
     skill.id = Date.now() % 1000000
     skill.possess = false
     skills.push(skill)
+}
+function deleteOne(id) {
+    id = parseInt(id)
+    const idx = skills.findIndex(skill => skill.id === id)
+    skills.splice(idx, 1)
 }
